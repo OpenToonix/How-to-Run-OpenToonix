@@ -1,5 +1,7 @@
 # How to Run OpenToonix
 
+[![Test Makefile](https://github.com/OpenToonix/How-to-Run-OpenToonix/actions/workflows/test-makefile.yml/badge.svg)](https://github.com/OpenToonix/How-to-Run-OpenToonix/actions/workflows/test-makefile.yml)
+
 This is a step-by-step guide on how to run OpenToonix.
 
 ## Requirements
@@ -7,7 +9,7 @@ This is a step-by-step guide on how to run OpenToonix.
 - **[Java](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html) Version 17 (Opyional when using [make](#running-using-makefile))** - For running both HTTP and RTMP servers
 - **[Docker](https://www.docker.com/)** - For running OpenToonix in a Docker container
 - **[Node.js](https://nodejs.org/) Version 22 (Optional when using [make](#running-using-makefile))** - For running both AMF server and Assets Gateway
-- **[Make](https://www.gnu.org/software/make/) (Only for Windows and Debian-based Linux distributions) (Optional when using necessary software to run OpenToonix)** - For running OpenToonix using the Makefile
+- **[Make](https://www.gnu.org/software/make/) (Only for Windows 10/11 and Debian-based Linux distributions) (Optional when using necessary software to run OpenToonix)** - For running OpenToonix using the Makefile
 - **[Red5 Server](https://github.com/Red5/red5-server) Version 1.2.29 (Optional when using [make](#running-using-makefile))** - For running RTMP server
 
 ### Running Using Makefile
@@ -32,6 +34,10 @@ For running OpenToonix using the Makefile, follow the following steps:
     $ make install-red5
     ```
 3. Run OpenToonix by running the command `make run`.
+
+**Note:** For Debian-based Linux distributions,
+you will need to have `wget` installed
+by running the command `sudo apt install wget`.
 
 **Note:** For Windows, you will need to use Windows Subsystem for Linux (WSL),
 or install `make` using `Chocolatey` by running the command `choco install make`

@@ -47,12 +47,12 @@ install-node:
 ifeq ($(OS),Windows_NT)
 	@echo "Installing NVM for Windows..."
 	curl -LO "https://github.com/coreybutler/nvm-windows/releases/latest/download/nvm-setup.exe"
-	./nvm-setup.exe /SILENT
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri 'https://github.com/coreybutler/nvm-windows/releases/latest/download/nvm-setup.exe' -OutFile 'nvm-setup.exe'"
+	@powershell -NoProfile -ExecutionPolicy Bypass -Command "Start-Process -FilePath './nvm-setup.exe' -ArgumentList '/SILENT','/NORESTART','/SUPPRESSMSGBOXES' -Wait"
 	@echo "NVM for Windows installed."
 	@echo "Installing latest Node.js 22.x using NVM (Windows)..."
-	@echo "Please open a new terminal and run the following to install the latest Node.js 22.x:"
-	@echo "    nvm install 22"
-	@echo "    nvm use 22"
+	@cmd /C "set PATH=%PATH%;C:\Program Files\nvm;C:\Program Files\nodejs && nvm install 22 && nvm use 22"
+	@echo "Latest Node.js 22.x installed (Windows)."
 else
 	@if [ "$(UNAME_S)" = "Linux" ]; then \
 		echo "Installing NVM (Linux)..."; \
