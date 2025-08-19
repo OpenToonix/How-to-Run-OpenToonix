@@ -4,6 +4,19 @@
 
 This is a step-by-step guide on how to run OpenToonix.
 
+<details>
+    <summary>
+        <strong>Table of contents</strong>
+        (click to open)
+    </summary>
+
+- [Requirements](#requirements)
+- [Running OpenToonix](#running-opentoonix)
+
+    - [Running Using Makefile](#running-using-makefile)
+    - [Running Using Only Necessary Software](#running-using-only-necessary-software)
+</details>
+
 ## Requirements
 
 - **[Java](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/downloads-list.html) Version 17 (Opyional when using [make](#running-using-makefile))** - For running both HTTP and RTMP servers
@@ -11,6 +24,8 @@ This is a step-by-step guide on how to run OpenToonix.
 - **[Node.js](https://nodejs.org/) Version 22 (Optional when using [make](#running-using-makefile))** - For running both AMF server and Assets Gateway
 - **[Make](https://www.gnu.org/software/make/) (Only for Windows 10/11 and Debian-based Linux distributions) (Optional when using necessary software to run OpenToonix)** - For running OpenToonix using the Makefile
 - **[Red5 Server](https://github.com/Red5/red5-server) Version 1.2.29 (Optional when using [make](#running-using-makefile))** - For running RTMP server
+
+## Running OpenToonix
 
 ### Running Using Makefile
 
