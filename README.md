@@ -23,7 +23,7 @@ This is a step-by-step guide on how to run OpenToonix.
 - **[Docker](https://www.docker.com/)** - For running OpenToonix in a Docker container
 - **[Node.js](https://nodejs.org/) Version 22 (Optional when using [make](#running-using-makefile))** - For running both AMF server and Assets Gateway
 - **[Make](https://www.gnu.org/software/make/) (Only for Windows 10/11 and Debian-based Linux distributions) (Optional when using necessary software to run OpenToonix)** - For running OpenToonix using the Makefile
-- **[Red5 Server](https://github.com/Red5/red5-server) Version 1.2.29 (Optional when using [make](#running-using-makefile))** - For running RTMP server
+- **[Red5 Server](https://github.com/Red5/red5-server) Version 1.3.25 (Optional when using [make](#running-using-makefile))** - For running RTMP server
 
 ## Running OpenToonix
 
@@ -62,7 +62,7 @@ from [Git Bash](https://git-scm.com/downloads) or [Cygwin](https://www.cygwin.co
 ### Running Using Only Necessary Software
 
 For running OpenToonix using only necessary software,
-and check out the following links for running each component:
+check out the following links for running each component:
 
 - [HTTP Server](https://github.com/OpenToonix/OpenToonix-HTTP-Server?tab=readme-ov-file#opentoonix-http-server)
 - [AMF Server](https://github.com/OpenToonix/OpenToonix-AMF-Server?tab=readme-ov-file#opentoonix-amf-server)

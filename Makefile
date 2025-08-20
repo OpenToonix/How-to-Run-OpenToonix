@@ -1,10 +1,10 @@
-# Makefile for installing Amazon Corretto 17 (OpenJDK), latest version of Node.js 22 (via NVM), and Red5 Server 1.2.29
+# Makefile for installing Amazon Corretto 17 (OpenJDK), latest version of Node.js 22 (via NVM), and Red5 Server 1.3.25
 # Supports both Linux and Windows (with Git Bash, Cygwin, or WSL)
 
 # Default to Linux or Windows based on the environment
 UNAME_S := $(shell uname -s)
 CORRETTO_VERSION := 17
-RED5_VERSION := 1.2.29
+RED5_VERSION := 1.3.25
 RED5_FILENAME := red5-server-${RED5_VERSION}.zip
 
 .PHONY: help all install install-jdk install-node install-red5
@@ -12,16 +12,16 @@ RED5_FILENAME := red5-server-${RED5_VERSION}.zip
 # Help target to display usage instructions
 help:
 	@echo "Usage:"
-	@echo "  make all          - Install Amazon Corretto 17, latest Node.js 22, and Red5 Server 1.2.29 and run OpenToonix"
+	@echo "  make all          - Install Amazon Corretto 17, latest Node.js 22, and Red5 Server 1.3.25 and run OpenToonix"
 	@echo "  make install-jdk  - Install Amazon Corretto 17 (OpenJDK)"
 	@echo "  make install-node - Install latest Node.js 22 using NVM"
-	@echo "  make install-red5 - Download Red5 Server 1.2.29"
+	@echo "  make install-red5 - Download Red5 Server 1.3.25"
 	@echo "  make help         - Show this help message"
 
 # Install necessary components for both Linux and Windows and run a OpenToonix instance
 all: install
 
-# Install Amazon Corretto 17 (OpenJDK), latest Node.js 22, and Red5 Server 1.2.29
+# Install Amazon Corretto 17 (OpenJDK), latest Node.js 22, and Red5 Server 1.3.25
 install: install-jdk install-node install-red5
 
 # Install Amazon Corretto 17 (OpenJDK)
@@ -67,7 +67,7 @@ else
 	fi
 endif
 
-# Download Red5 Server 1.2.29
+# Download Red5 Server 1.3.25
 install-red5:
 ifeq ($(OS),Windows_NT)
 	@echo "Downloading Red5 Server $(RED5_VERSION) (Windows)..."
